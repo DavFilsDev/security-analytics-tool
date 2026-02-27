@@ -88,16 +88,13 @@ def divide(a: float, b: float) -> float:
     
     return a / b
 
-# For testing purposes only
 if __name__ == "__main__":
-    # Simple demonstrations
-    print("=== Calculator Operations Demo ===")
+    print("// Calculator Operations Demo")
     print(f"Add 2 + 3 = {add(2, 3)}")
     print(f"Subtract 5 - 3 = {subtract(5, 3)}")
     print(f"Multiply 4 * 3 = {multiply(4, 3)}")
     print(f"Divide 10 / 2 = {divide(10, 2)}")
     
-    # Error handling demo
     try:
         divide(5, 0)
     except DivisionByZeroError as e:
