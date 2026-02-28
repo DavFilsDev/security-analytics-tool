@@ -9,7 +9,6 @@ from src.core.exceptions import DivisionByZeroError, CalculationError
 class TestCalculatorOperations:
     """Test suite for basic arithmetic operations."""
     
-    # Addition Tests
     def test_add_positive_numbers(self):
         """Test addition with positive numbers."""
         assert add(2, 3) == 5
@@ -26,7 +25,6 @@ class TestCalculatorOperations:
         assert add(5, 0) == 5
         assert add(0, 0) == 0
     
-    # Subtraction Tests
     def test_subtract_positive_numbers(self):
         """Test subtraction with positive numbers."""
         assert subtract(5, 3) == 2
@@ -43,7 +41,6 @@ class TestCalculatorOperations:
         assert subtract(0, 5) == -5
         assert subtract(0, 0) == 0
     
-    # Multiplication Tests
     def test_multiply_positive_numbers(self):
         """Test multiplication with positive numbers."""
         assert multiply(4, 3) == 12
@@ -60,7 +57,6 @@ class TestCalculatorOperations:
         assert multiply(0, 5) == 0
         assert multiply(0, 0) == 0
     
-    # Division Tests
     def test_divide_positive_numbers(self):
         """Test division with positive numbers."""
         assert divide(10, 2) == 5.0
@@ -83,16 +79,13 @@ class TestCalculatorOperations:
         assert isinstance(result, float)
         assert result == 2.0
     
-    # Input Validation Tests
     def test_invalid_input_types(self):
         """Test that non-numeric inputs raise CalculationError."""
         with pytest.raises(CalculationError):
-            add("2", 3)  # String input
+            add("2", 3)
         
         with pytest.raises(CalculationError):
-            subtract(5, None)  # None input
+            subtract(5, None)
         
         with pytest.raises(CalculationError):
-            multiply([1, 2], 3)  # List input
-
-# Run tests with: pytest tests/test_operations.py -v
+            multiply([1, 2], 3)
